@@ -1,14 +1,21 @@
 // Condition 1
 
-function myFunc(number) {
-    if (number % 2 == 0) {
-        return number / 2;
-    } else if (number % 2 != 0) {
-        return (number * 3) + 1;
+var numarray = [];
+function myFun(number) {
+    for (let i = number; i != 1;) {
+
+        if (i % 2 == 0) {
+            i = i / 2;
+        } else if (i % 2 != 0) {
+            i = (3 * i) + 1;
+        }
+        numarray.push(i);
     }
+    return numarray;
 }
 
-console.log(myFunc(3));
+console.log(myFun(3))
+
 
 
 // Condition 2 
@@ -24,6 +31,7 @@ function Max(arr) {
 function Min(arr) {
     return Math.min.apply(null, arr);
 }
+
 
 
 // Condition 3
