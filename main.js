@@ -1,4 +1,6 @@
-// Condition 1
+// 1. Funksiya yazacaqsınız və bu funksiya parametr olaraq number qəbul edir. 
+// Əgər number cütdürsə, həmin number-i 2-yə bölürsünüz, təkdirsə 3-ə vurub üzərinə 1 gəlirsiniz. 
+// Bu prosesi həmin number 1 olana qədər təkrarlanır ( 3 -> 10 -> 5 -> 16 -> 8 -> 4 -> 2 -> 1)
 
 var numarray = [];
 function myFun(number) {
@@ -18,7 +20,7 @@ console.log(myFun(3))
 
 
 
-// Condition 2 
+// 2. Array-dəki ən böyük və ən kiçik ədədi tapın və onların fərqini console-a çıxarın.
 
 var num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 var cvb = Max(num) - Min(num);
@@ -34,11 +36,21 @@ function Min(arr) {
 
 
 
-// Condition 3
+// 3. Funksiya yazacaqsiniz və parametr olaraq array və number qəbul edəcək. Həmin number-in array-də olub-olmadığını yoxlayacaqsınız.
 
-function Example(array, number2) {
-    var nmb2 = Array.isArray(number2);
-    console.log(nmb2);
+
+let array = [1, 2, 3, 4, 5];
+let number = 3;
+
+function myFun(array, number) {
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === number) {
+            return true;
+        }
+    }
+    return false
 }
+console.log(myFun(array, number));
 
-Example("Nihad", 19);
+
+
